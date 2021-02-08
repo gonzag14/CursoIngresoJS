@@ -14,6 +14,16 @@ function mostrar()
 	
 // Esto es condicional simple -
 
+// == igual
+//  != distinto
+//  > mayor
+//  < menor
+//  >= mayor o igual
+//  <= menor o igual
+
+
+
+//
 
 }//FIN DE LA FUNCIÓN
 
