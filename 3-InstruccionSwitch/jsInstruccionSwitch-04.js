@@ -11,9 +11,10 @@ function mostrar()
 		case "Marzo":
 		case "Mayo":
 		case "Julio":
-		case "Septiembre":
 		case "Diciembre":
-		    alert("Este mes tiene 31 dias");
+		case "Octubre":
+		case "Agosto": 
+		alert("Este mes tiene 31 dias");
 		break;
 		
 		case "Abril":
