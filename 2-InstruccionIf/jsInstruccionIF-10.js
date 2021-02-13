@@ -10,7 +10,7 @@ function mostrar()
 	// otra forma de hacerlo
 	// let nota
 	//nota = Math.round(Math.random() * 9 + 1);
-
+	//nota = Math.Floor(Math.random() * 10) + 1;
 
 
 	if (notas >=9 && notas <= 10) 
@@ -27,5 +27,5 @@ function mostrar()
 
 
 	}
-
+// Repasar clase miercoles 10/02 hora de clase 20.00
 }//FIN DE LA FUNCIÓN

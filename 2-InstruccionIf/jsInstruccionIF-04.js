@@ -9,5 +9,5 @@ function mostrar()
 	{
 	alert("No es adolescente");
 	}
-// NO esta terminado, no se que onda
+
 }//FIN DE LA FUNCIÓN

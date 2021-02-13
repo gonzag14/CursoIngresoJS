@@ -1,6 +1,4 @@
-function mostrar()
-{
-	var estacionIngresada =txtIdEstacion.value;
-	alert(estacionIngresada);
+function mostrar() {
 
+	
 }//FIN DE LA FUNCIÓN
