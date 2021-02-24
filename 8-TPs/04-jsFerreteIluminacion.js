@@ -12,3 +12,15 @@ function CalcularPrecio ()
 {
  	
 }
+/* 
+1 declaracion de variables
+2 obtengo los datos (cantidad/ marca)
+3 genero un ambito para cada rango de cantidad
+4 genero un ambito de marca
+5 asigno el porcentaje de descuento que corresponde
+6 calculo el precio con descuento
+7 calculo el importe a pagar
+8 me fijo si es alcanzado por IIBB (ingresos brutos) y si es asi lo calculo
+9 muestro al usuario el precio con descuento
+10 muestro el importe a pagar
+*/
