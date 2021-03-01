@@ -4,8 +4,35 @@ mostrar el número máximo y el número mínimo ingresado.*/
 function mostrar()
 {	// declarar variables
 
+let numero;
+let maximo;
+let minimo;
+let seguir;
+let flag = 0;
 
+// armo un bucle del tipo mientras el usuario quiera (do while)
+do{
+        //pido un numero
+    numero = parseInt(prompt("Ingrese un numero"));
 
+    //debo reconocer si estoy pidiendo por primera vez
+      // si es asi inicializo max y min  
+    if (flag == 0 || numero > maximo){
+    maximo = numero;
+   }
+   if (flag == 0 || numero < minimo){
+    minimo = numero;    
+    flag = 1;
+   }
+
+    seguir = prompt("Quiere ingresar otro numero? s/n")
+    } while (seguir == "s");
+
+    //muestro la informaicon (max y min)
+
+    document.getElementById("txtIdMaximo").value = maximo;
+    document.getElementById("txtIdMinimo").value = minimo;
+  
 
 
 

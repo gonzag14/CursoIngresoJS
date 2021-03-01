@@ -2,38 +2,55 @@
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 sumar los que son positivos y multiplicar los negativos.*/
 function mostrar() {
+  
+  //declaracion de variables
   let numero;
-  let acumPos = 0;
-  let acumNeg = 1; //pq si lo inicializo en 0 y desp tengo q multipl. me  va a dar 0
+  let numPos = 0;
+  let numNeg = 1;
   let seguir;
   let flag = 0;
-  do {
-    numero = parseInt(prompt("Ingrese un numero: "));
 
-    while (isNaN(numero)) {
-      numero = parseInt(prompt("Eso no es un numero. Ingrese un numero: "));
-    }
-
-    if (numero > 0) {
-      acumPos = acumPos + numero;
+    //debemos armar un bucle del tipo mientras el usuario quiera (do while)
+  do{
+    numero = parseInt(prompt("Ingrese un numero"));
     
-    }
-     else {
-     
-      acumNeg = acumNeg * numero;
+      
+    //analizar el signo de cada numero --> dentro del bucle
+     if( numero >= 0 ){
+      
+      //positivo
+      numPos = numPos + numero
+         }
+
+     else{
+      //negativo
       flag = 1;
-    }
+      numNeg = numNeg * numero      
+     }
+   
+    
 
-    seguir = prompt("Quiere continuar? s/n");
-  } while (seguir == "s");
 
-  if(flag == 0){
-    acumNeg = 0;
+    seguir = prompt("Quiere ingresar otro numero? s/n");
+  }
+  while(seguir == "s");
+
+  if (flag == 0){
+    numNeg = 0;
+    
+
   }
 
+  document.getElementById("txtIdSuma").value = numPos
+  document.getElementById("txtIdProducto").value = numNeg
+  
+  
 
-  document.getElementById("txtIdSuma").value = acumPos;
-  document.getElementById("txtIdProducto").value = acumNeg;
+
+
+
+
+
 } 
 
 // CLASE 10 TERMINA 1:48 ESTE EJERCICIO Y EMPIEZA A EXPLICAR EL FLAG

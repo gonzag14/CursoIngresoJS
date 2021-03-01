@@ -1,29 +1,89 @@
 /*
 Al presionar el botón pedir  números  
 hasta que el usuario quiera, mostrar:
-1-Suma de los negativos.
-2-Suma de los positivos.
-3-Cantidad de positivos.
-4-Cantidad de negativos.
-5-Cantidad de ceros.
-6-Cantidad de números pares.
-7-Promedio de positivos.
-8-Promedios de negativos.
-9-Diferencia entre positivos y negativos, (positvos-negativos). */
+ */
 function mostrar()
-{
-	//declarar contadores y variables 
-	var respuesta;
-	var numeroIngresado;
-	var sumaNegativos=0;
+{		//MINUTO 52.11 CLASE 10
+	//declarar variables
+	let numero;
+	let seguir;
+	let contadorPositivos = 0;
+	let contadorNegativos = 0;
+	let contadorCeros = 0;
+	let contadorPares = 0;
+	let acumuladorPositivos = 0;
+	let acumuladorNegativos = 0;
+	let promedioPositivos = 0;
+	let promedioNegativos = 0;
+	let diferencia;
 
-	respuesta="si";
+	// generar un bucle del tipo mientras el usaurio quiera (do while)
+do{  
+	//pido numeros
+	numero = parseInt(prompt("Ingrese un numero"));
+	
+	//analizar el signo del numero y actuar en consecuencia
+	if(numero < 0 ){
+		// negativos
+		acumuladorNegativos += numero    // acumuladorNegativos = acumuladorNegativos + numero
+		contadorNegativos++
+	}
+	else if (numero == 0 ) {
+		//ceros
+		contadorCeros++;
+	}
+	else{
+		//positivos
+		acumuladorPositivos += numero;
+		contadorPositivos++;
 
-	while(respuesta=="si")
-	{
-		
-		respuesta=prompt("desea continuar?");
-	}//fin del while
+	}
+	
+	if(numero % 2 == 0){
+//analizar si es par
+	contadorPares++;
 
-	document.write("la suma de negativos es :"+sumaNegativos);
+	}
+	
+	
+	
+	seguir = prompt("Quiere seguir? s/n")
+}
+while(seguir == "s"  );
+	// hacer los calculos que necesitan los datos conseguidos durante el bucle
+	// sacar promedio de positivos, negativos
+ if(contadorPositivos > 0  ){
+	promedioPositivos = acumuladorPositivos / contadorPositivos;
+
+ }
+ if(contadorNegativos > 0){
+	 promedioNegativos = acumuladorNegativos / contadorNegativos;
+ }
+//sacar diferncia
+diferencia = contadorPositivos - contadorNegativos;
+
+
+//muestro los resultados
+console.log("   Suma de los negativos.      " + acumuladorNegativos);
+console.log("   Suma de los positivos      " + acumuladorPositivos);
+console.log("   Cantidad de positivos      " + contadorPositivos);
+console.log("  Cantidad de negativos       " + contadorNegativos);
+console.log("   Cantidad de ceros      " + contadorCeros);
+console.log("   Cantidad de números pares.      " + contadorPares);
+console.log("  Promedio de positivos.       " + promedioPositivos);
+console.log("   Promedios de negativos      " + promedioNegativos);
+console.log("    Diferencia     " + diferencia);
+	
+	
+
+
+	
+	 
+
+	
+
+
+
+
 }//FIN DE LA FUNCIÓN
+
