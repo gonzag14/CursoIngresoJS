@@ -1,6 +1,6 @@
 /*
-Al presionar el botón pedir  números  
-hasta que el usuario quiera, mostrar:
+Al presionar el botón pedir  números    
+hasta que el usuario quiera, mostrar:							//PARCEFLAOT SE USA CUANDO PONEMOS DECIMAL, EN ESTE CASO DEL PARCIAL 2020 DINERO.
  */
 function mostrar()
 {		//MINUTO 52.11 CLASE 10
